@@ -47,13 +47,13 @@ if __name__ == '__main__':
         
         if mc1.values_map.items() <= mc2.items():
             print('mc matches')
-        else:
-            print("mc doesn't match")
-            for state in mc2.keys():
-                print(state)
-                print(mc1.values_map[state])
-                print(mc2[state])
-            break
+        # else:
+        #     print("mc doesn't match")
+        #     for state in mc2.keys():
+        #         print(state)
+        #         print(mc1.values_map[state])
+        #         print(mc2[state])
+        #     break
         
         if td1.values_map.items() <= td2.items():
             print('td matches')

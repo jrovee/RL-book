@@ -20,11 +20,13 @@ NTStateDistribution = Distribution[NonTerminal[S]]
 def tabular_glie_mc_control(
     mdp: FiniteMarkovDecisionProcess[S,A],
     gamma: float,
-    approx_0: QValueFunctionApprox = Tabular(),
+    approx_0: QValueFunctionApprox = None,
     episode_len_tol: float = 1e-6
 ) -> Iterator[QValueFunctionApprox[S,A]]:
 
     start_states : NTStateDistribution = Choose(mdp.non_terminal_states)
+    if approx_0 is None:
+        approx_0 = Tabular({})
     Q_approx = approx_0
     yield Q_approx
 

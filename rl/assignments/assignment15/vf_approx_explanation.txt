@@ -1,0 +1,9 @@
+The implied MRP value function is exactly identical to the LSTD
+value function, the TD value function is really close to the results
+of these two method, and Monte Carlo is really far away. The fact that
+the LSTD value function agrees with the implied MRP value function 
+agrees with what we learned in class, which is that LSTD solves for the 
+value function of the implied MRP given by empirical probabilities.
+TD is really close to this, but not quite equal bc of stochastic error. 
+And MC is really far away, since MC is high-variance and we had a tiny 
+number of traces, so the variance dominates the error.
